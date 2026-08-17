@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-html-app-cd
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/evgen-dev-ops/my-cicd-app.git'
+    targetRevision: HEAD
+    path: k8s
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
