@@ -23,4 +23,4 @@ jobs:
         context: ./app
         file: ./app/Dockerfile
         push: true
-        tags: docker.io/${{ secrets.DOCKERHUB_USERNAME }}/my-html-app:v1
+        tags: docker.io/${{ secrets.DOCKERHUB_USERNAME }}/my-html-app:v2.0
