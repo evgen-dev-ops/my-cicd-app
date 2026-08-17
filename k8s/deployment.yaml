@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.io/nesmashny/my-html-app:v1
+        image: docker.io/nesmashny/my-html-app:v2
         ports:
         - containerPort: 80
